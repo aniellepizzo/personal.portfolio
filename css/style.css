@@ -55,6 +55,22 @@ blockquote, q {
     MAIN
 *******************************************/
 
+
+#pageContent,
+#pageContent .container{
+	width: 100%;
+}
+
+#loading{
+	visibility:hidden;
+}
+
+.img-responsive{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
 @media (min-width: 1000px){
     .main{
         width: 100wh;
@@ -65,13 +81,28 @@ blockquote, q {
     .container-main{
         width: 1000px;
         height: 600px;
-        /*border: 1px solid red;*/
+        border: 1px solid red;
         margin: -300px auto auto auto;
         top: 50%;
         position: relative;
     }
     
+    .container .col{
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 15px;        
+    }
+    
+    .container .col.col-lg-30{
+        width: 30%;
+    }    
+    
+    .container .col.col-lg-100{
+        width: 100%;
+    }    
+    
 }
+
 
 /*******************************************
     FONT FACE
@@ -79,6 +110,15 @@ blockquote, q {
 
 body{
     font-family: 'Open Sans', sans-serif;
+    color: #545454;    
+}
+
+p{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
 }
 
 @font-face {
@@ -95,6 +135,10 @@ body{
 /*******************************************
     NAV
 *******************************************/
+nav.menu-topo{
+    margin: 0 0 30px 0;
+}
+
 nav.menu-topo,
 nav.menu-topo ul{
     width: 100%;
@@ -111,7 +155,7 @@ nav.menu-topo ul li a{
     text-decoration: none;
     font-family: 'Gotham';
     text-transform: uppercase;
-    color: #545454;
+    color: #545454;        
 }
 
 nav.menu-topo ul li a:before,
@@ -170,7 +214,5 @@ nav.menu-topo ul li a:after{
     nav.menu-topo ul li a:hover:after{
         right: -5px;        
     }
-    
-    
     
 }

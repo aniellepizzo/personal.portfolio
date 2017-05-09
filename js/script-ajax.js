@@ -2,15 +2,19 @@ var default_content = "";
 
 $(document).ready(function(){
 	
+    var link = $("nav.menu-topo ul li a"); 
+    
 	checkURL();
-	$('ul li a').click(function (e){
+	$(link).click(function (e){
 
 			checkURL(this.hash);
 
 	});
 	
 	//filling in the default content
-	default_content = $('#pageContent').html();	
+    homePage = $("<div class='container index'><div class='container-cat'><div class='z um animated fadeInUpZ'><img src='images/z-01.png'/></div><div class='z dois animated fadeInUpZ'><img src='images/z-02.png'/></div><div class='z tres animated fadeInUpZ'><img src='images/z-03.png'/></div></div></div>");
+    
+	default_content = $('#pageContent').html(homePage);	
 	
 	setInterval("checkURL()",250);
 	
@@ -40,7 +44,7 @@ function checkURL(hash)
 
 function loadPage(url)
 {
-	url=url.replace('#page','');
+	url=url.replace('#page','');     
 	
 	$('#loading').css('visibility','visible');
 	
@@ -54,6 +58,7 @@ function loadPage(url)
 			if(parseInt(msg)!=0)
 			{
 				$('#pageContent').html(msg);
+                $("#pageContent .container").addClass("animated fadeIn");
 				$('#loading').css('visibility','hidden');
 			}
 		}

@@ -204,7 +204,7 @@ nav.menu-topo ul li a:before,
 nav.menu-topo ul li a:after{
     content: '';
     display: block;
-    background: #d9483b;
+    background: #e7a279;
     width: 10px;
     height: 10px;
     border-radius: 100%;
@@ -259,6 +259,47 @@ nav.menu-topo ul li a:after{
     
 }
 
+/*******************************************
+    INDEX
+*******************************************/
+.container.index{
+    height: 500px;
+    position: relative;
+}
+
+.container.index .container-cat{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -116.5px auto auto -157.5px;
+    background: url(../images/cat.png) no-repeat right bottom;
+    width: 315px;
+    height: 233px;
+}
+
+.container.index .container-cat .z{
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.container.index .container-cat .z.um{
+    top: 65px;
+    left: 35px;
+    animation-delay: 0.3s;    
+}
+
+.container.index .container-cat .z.dois{
+    top: 25px;
+    left: 6px; 
+    animation-delay: 0.6s;
+}
+
+.container.index .container-cat .z.tres{
+    left: 45px;
+    top: 0;  
+    animation-delay: 0.9s;
+}
 
 /*******************************************
     EU
@@ -369,13 +410,95 @@ ul.contact li:last-child a i{
     #style-scroll::-webkit-scrollbar
     {
         width: 7px;
-        background-color: #bf1b39;
+        background-color: #f2b28d;
     }
 
     #style-scroll::-webkit-scrollbar-thumb
     {
-        background-color: #bf1b39;
-        border: 1px solid #731d2c;
+        background-color: #f2b28d;
+        border: 1px solid #e19f79;
     }    
 }
 
+
+/*******************************************
+    ANIMATIONS
+*******************************************/
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+/* fadeInUp */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* fadeInUpZ */
+
+@keyframes fadeInUpZ {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+    
+  100% {
+    opacity: 0;
+  }    
+}
+
+.fadeInUpZ {
+  animation-name: fadeInUpZ;
+}
+
+
+/* fadeInLeft */
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

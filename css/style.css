@@ -76,7 +76,6 @@ blockquote, q {
     display: inline-block;
     vertical-align: top;
     padding: 0 15px;
-    margin: 0 -2px;
 }
 
 @media (min-width: 1000px){
@@ -97,6 +96,7 @@ blockquote, q {
         margin: -300px auto auto auto;
         top: 50%;
         position: relative;
+        font-size: 0;
     }
     
     .container .col-lg-30{
@@ -108,7 +108,7 @@ blockquote, q {
     }
     
     .container .col-lg-50{
-        width: 33%;
+        width: 50%;
     }    
     
     .container .col-lg-100{
@@ -123,7 +123,7 @@ blockquote, q {
     }
     
     .container .col-xs-50{
-        width: 33%;
+        width: 50%;
     }    
     
     .container .col-xs-100{
@@ -137,7 +137,7 @@ blockquote, q {
     }
     
     .container .col-sm-50{
-        width: 33%;
+        width: 50%;
     }    
     
     .container .col-sm-100{
@@ -364,7 +364,7 @@ ul.contact li:last-child a i{
 
 .fiz .card p{
     font-size: 15px;
-    text-align: justify;
+    text-align: center;
     padding: 5px 0;
 }
 
@@ -420,6 +420,42 @@ ul.contact li:last-child a i{
     }    
 }
 
+
+/*******************************************
+    ESTIIVE
+*******************************************/
+.estive .card{
+    float: left;
+    padding: 20px;
+}
+
+.estive .card h2{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    border-left: 4px solid #e7a279;
+    padding: 0 0 0 20px;    
+}
+
+.estive .card p{
+    padding: 0 0 0 24px;
+    font-size: 16px;
+}
+
+.estive .card p strong{
+    font-weight: 400;
+    display: block;
+    margin: 7px 0;
+}
+
+.estive .card p i.bolinha{
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: #e7a279;
+    margin: -3px 7px 0;
+}
 
 /*******************************************
     ANIMATIONS

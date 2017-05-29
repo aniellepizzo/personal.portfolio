@@ -92,7 +92,6 @@ blockquote, q {
     .container-main{
         width: 1000px;
         height: 600px;
-        border-bottom: 1px solid red;
         margin: -300px auto auto auto;
         top: 50%;
         position: relative;
@@ -145,6 +144,12 @@ blockquote, q {
     }    
 }
 
+@media (max-width: 999px){
+    #pageContent .container{
+        padding: 60px 0;
+    }
+}
+
 
 /*******************************************
     FONT FACE
@@ -171,7 +176,6 @@ p{
   font-weight: normal;
   font-style: normal;
 }
-
 
 
 /*******************************************
@@ -257,13 +261,43 @@ nav.menu-topo ul li a:after{
         right: -5px;        
     }
     
+    nav.menu-topo.mobile{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 999px){
+     nav.menu-topo {
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+         border-top: 1px solid #ccc;
+         border-bottom: 1px solid #ccc;
+         padding: 10px;
+         background: #fff;
+    }   
+    
+    nav.menu-topo.mobile{
+        top: 0;
+        bottom: auto;
+    }
+    
+    nav.menu-topo .name{
+        display: none;
+    }
+    
+    nav.menu-topo ul li a:before, nav.menu-topo ul li a:after{
+        display: none;
+    }    
 }
 
 /*******************************************
     INDEX
 *******************************************/
 .container.index{
-    height: 500px;
     position: relative;
 }
 
@@ -299,6 +333,23 @@ nav.menu-topo ul li a:after{
     left: 45px;
     top: 0;  
     animation-delay: 0.9s;
+}
+
+@media (min-width: 1000px){
+    .container.index{
+        height: 500px;
+    }
+}
+    
+@media (max-width: 999px){
+    .container.index{
+        height: 100vh;
+        padding: 0 !important;
+    }
+    
+    .container.index .container-cat{
+        transform: scale(0.9);
+    }
 }
 
 /*******************************************
@@ -365,6 +416,22 @@ ul.contact li:last-child a i{
     .col-eu .eu-hover:hover{
         opacity: 1;
     }    
+}
+
+@media (max-width: 999px){
+    .col-eu img{
+        max-width: 100%;
+        border-right: 4px solid #e7a279;
+        border-left: 4px solid #e7a279;
+    } 
+    
+    .col-eu .eu-hover{
+        display: none;
+    }
+    
+    p{
+        text-align: center;
+    }
 }
 
 /*******************************************

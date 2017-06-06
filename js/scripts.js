@@ -9,8 +9,4 @@ $(function () {
         //e.preventDefault();
     }); 
     
-$(botao).filter(function() {
-    return this.href.pathname === window.location.pathname;
-).addClass("teste"); 
-    
 });

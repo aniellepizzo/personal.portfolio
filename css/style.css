@@ -223,7 +223,7 @@ nav.menu-topo ul li a:after{
 
 @media (min-width: 1000px){
     nav.menu-topo ul li{
-        margin: 0 7px;
+        margin: 0 15px;
     }
     
     nav.menu-topo ul li a{

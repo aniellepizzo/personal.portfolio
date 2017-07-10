@@ -79,11 +79,6 @@ blockquote, q {
     height: auto;
 }
 
-.container .col{
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 15px;
-}
 
 @media (min-width: 1000px){
     .main{
@@ -119,8 +114,16 @@ blockquote, q {
     
     .container .col-lg-100{
         width: 100%;
-    }    
+    }      
     
+}
+
+@media (min-width: 501px){
+    .container .col{
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 15px;
+    }    
 }
 
 @media (max-width: 499px){
@@ -135,6 +138,13 @@ blockquote, q {
     .container .col-xs-100{
         width: 100%;
     }    
+    
+    .container .col{
+        display: block;
+        margin: 0 auto;
+        width: 85%;
+        padding: 0 15px;
+    }    
 }
 
 @media (min-width: 500px) and (max-width: 999px){
@@ -143,7 +153,7 @@ blockquote, q {
     }
     
     .container .col-sm-50{
-        width: 50%;
+        width: 49%;
     }    
     
     .container .col-sm-100{
@@ -292,14 +302,28 @@ nav.menu-topo ul li a:after{
     nav.menu-topo.mobile{
         top: 0;
         bottom: auto;
+        border: 0;
+        background: #e7a279;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
     }
     
-    nav.menu-topo.mobile li a{
+    nav.menu-topo.mobile li a,
+    nav.menu-topo.mobile li.active a{
         font-size: 20px;
+        color: #fff;
     }
+    
+    nav.menu-topo.mobile li.active a:before,
+    nav.menu-topo.mobile li.active a:after{
+        display: none;
+    }    
     
     nav.menu-topo li a{
         font-size: 16px;
+    }
+    
+    nav.menu-topo li.active a{
+        color: #e7a279;
     }
     
     nav.menu-topo .name{
@@ -466,6 +490,12 @@ ul.contact li:last-child a i{
     ul.contact{
         text-align: center;
         padding: 20px 0 30px;
+        margin: 0 -15px;
+        width: calc(100% + 30px);
+    }
+    
+    ul.contact li a{
+        letter-spacing: 2px;
     }
     
     ul.contact li:last-child{
@@ -478,7 +508,8 @@ ul.contact li:last-child a i{
         margin: 0 4px;
     }
     
-    ul.contact li:nth-child(2) a:after{
+    ul.contact li:nth-child(2) a:after,
+    ul.contact li:nth-child(3) a:after{
         content: '';
         display: inline-block;
         vertical-align: middle;
@@ -487,8 +518,13 @@ ul.contact li:last-child a i{
         border-radius: 100%;
         background: #e7a279;
         margin: 0 4px;
-    }    
+    }  
+    
+    ul.contact li:nth-child(3) a:before{
+        display: none;
+    }
 }
+
 
 /*******************************************
     FIZ
@@ -534,12 +570,35 @@ ul.contact li:last-child a i{
     text-shadow: 1px 1px 1px #e7a279;
 }
 
-@media (min-width: 1000px){    
+@media (min-width: 501px){
+    .fiz .card{
+        height: 421px;
+        position: relative;
+    } 
+    
+    .fiz .card .link{
+        width: calc(100% - 10px);
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+    }    
+}
+
+@media (min-width: 501px) and (max-width: 999px){
+    #pageContent .container.eu,
+    #pageContent .container.fiz{
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1000px){   
+    
     .fiz .card:hover{
         transform: translateY(-10px);
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     }
-
+    
     .fiz .card:hover .link{
         background: #e7a279;
     }    
